@@ -51,7 +51,6 @@ class Inventory {
   }
 
   void menu(){
-    Scanner menuInput = new Scanner(System.in);
     boolean notDone = true;
     while(notDone){
       System.out.println("Press 1 to add an item.");
@@ -59,8 +58,9 @@ class Inventory {
       System.out.println("Press 3 to update an item.");
       System.out.println("Press 4 to show all the items.");
       System.out.println("Press 5 to quit the program.");
-      
-      switch(menuInput.nextInt()){
+      int theCase = input.nextInt();
+      input.nextLine();
+      switch(theCase){
         case 1:
           addItem();
           break;
@@ -78,7 +78,7 @@ class Inventory {
           break;
       }
     }
-    menuInput.close();
+    input.close();
   }
   
 }
