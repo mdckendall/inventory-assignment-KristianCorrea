@@ -83,7 +83,7 @@ class Inventory {
   
 }
 
-class Main {
+public class Main {
 	public static void main(String[] args) {
     Inventory inv1 = new Inventory();
     inv1.menu();
